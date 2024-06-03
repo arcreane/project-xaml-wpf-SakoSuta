@@ -1,0 +1,26 @@
+<Page x:Class="EatsEngine.SearchPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Search Page" Width="1000" Height="534.42">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBox x:Name="searchBox" Grid.Row="0" Margin="10" Padding="5"
+                 FontSize="16" Text="Type here to search..."/>
+
+        <ListView x:Name="searchResults" Grid.Row="1" Margin="10" BorderBrush="White">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="10">
+                        <TextBlock Text="{Binding Name}" FontWeight="Bold" FontSize="16"/>
+                        <TextBlock Text="{Binding Description}" FontStyle="Italic"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Page>

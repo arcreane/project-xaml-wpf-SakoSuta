@@ -12,12 +12,12 @@ namespace Model {
         /// <summary>
         /// 
         /// </summary>
-        public virtual void Ingredients { get; set; }
+        ///public virtual void Ingredients { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        public virtual void GenerateList();
+        ///public virtual void GenerateList();
 
     }
 }

@@ -5,8 +5,87 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EatsEngine"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="597" Width="1000" ResizeMode="NoResize">
+
+    <Window.Resources>
+        <Style TargetType="Button" x:Key="NavButtonStyle">
+            <Setter Property="Background" Value="#FF444444"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="Padding" Value="20,5"/>
+            <Setter Property="Margin" Value="10, 8"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="8">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FF555555"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="NavBackgroundStyle" TargetType="DockPanel">
+            <Setter Property="Background" Value="#7F333333"/>
+        </Style>
+    </Window.Resources>
+
+
     <Grid>
-        <Button Content="Test Button" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="-2.687,-3.683" Margin="71,56,0,0"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <DockPanel Style="{StaticResource NavBackgroundStyle}"  Background="#7F333333" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" >
+            <StackPanel Orientation="Horizontal" DockPanel.Dock="Left" HorizontalAlignment="Center">
+                <Button Style="{StaticResource NavButtonStyle}" DockPanel.Dock="Left" Click="AccueilButton_Click" Width="162" VerticalAlignment="Center">
+                    <Button.Content>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/assets/icons/home.png" Width="16" Height="16"/>
+                            <TextBlock Text=" Accueil" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button.Content>
+                </Button>
+                <Button Style="{StaticResource NavButtonStyle}" DockPanel.Dock="Left" Click="SearchButton_Click" Width="162">
+                    <Button.Content>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/assets/icons/search.png" Width="16" Height="16"/>
+                            <TextBlock Text=" Recherche" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button.Content>
+                </Button>
+                <Button Style="{StaticResource NavButtonStyle}" DockPanel.Dock="Left" Click="PlanningButton_Click" Width="162">
+                    <Button.Content>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/assets/icons/planning.png" Width="16" Height="16"/>
+                            <TextBlock Text=" Planning" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button.Content>
+                </Button>
+                <Button Style="{StaticResource NavButtonStyle}" DockPanel.Dock="Left" Click="ShopButton_Click" Width="162">
+                    <Button.Content>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/assets/icons/shopping.png" Width="16" Height="16"/>
+                            <TextBlock Text=" Course" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button.Content>
+                </Button>
+
+            </StackPanel>
+        </DockPanel>
+
+
+        <Frame x:Name="MainContentFrame" x:FieldModifier="public" Source="HomePage.xaml" Navigated="MainContentFrame_Navigated" NavigationUIVisibility="Hidden" Grid.Row="1" Width="1000" Height="534.42" Background="White"/>
     </Grid>
 </Window>

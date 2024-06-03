@@ -12,22 +12,22 @@ namespace Model {
         /// <summary>
         /// 
         /// </summary>
-        public virtual void State { get; set; }
+        ///public virtual void State { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        public virtual void Chop();
+        ///public virtual void Chop();
 
         /// <summary>
         /// 
         /// </summary>
-        public virtual void Mix();
+        ///public virtual void Mix();
 
         /// <summary>
         /// 
         /// </summary>
-        public virtual void Cut();
+        ///public virtual void Cut();
 
         /// TODO: Other instructionion to come
 

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\SAIKO\Documents\Webstart_3\C#\Recette\project-xaml-wpf-SakoSuta\EatsEngine\obj\Release\net8.0-windows\
+C:\Users\Emili\Documents\project-xaml-wpf-SakoSuta\EatsEngine\obj\Release\net8.0-windows\
 EatsEngine
 none
 false
 TRACE;RELEASE;NET;NET8_0;NETCOREAPP
-C:\Users\SAIKO\Documents\Webstart_3\C#\Recette\project-xaml-wpf-SakoSuta\EatsEngine\App.xaml
-11407045341
+C:\Users\Emili\Documents\project-xaml-wpf-SakoSuta\EatsEngine\App.xaml
+3-837899169
 
-8-167111927
-198-294894759
-MainWindow.xaml;
+11952550399
+198-1509178875
+HomePage.xaml;MainWindow.xaml;SearchPage.xaml;
 
 True
 

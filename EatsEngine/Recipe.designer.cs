@@ -12,37 +12,37 @@ namespace Model {
         /// <summary>
         /// 
         /// </summary>
-        public virtual void Name { get; set; }
+        ///public virtual void Name { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        public virtual void Ingredients { get; set; }
+        ///public virtual void Ingredients { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        public virtual void PreparationSteps { get; set; }
+        ///public virtual void PreparationSteps { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        public virtual void Pictures { get; set; }
+        ///public virtual void Pictures { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        public virtual void AddRecipe();
+        ///public virtual void AddRecipe();
 
         /// <summary>
         /// 
         /// </summary>
-        public virtual void EditRecipe();
+        ///public virtual void EditRecipe();
 
         /// <summary>
         /// 
         /// </summary>
-        public virtual void DeleteRecipe();
+        ///public virtual void DeleteRecipe();
 
     }
 }

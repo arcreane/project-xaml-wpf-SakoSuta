@@ -12,22 +12,22 @@ namespace Model {
         /// <summary>
         /// 
         /// </summary>
-        public virtual void Day { get; set; }
+        ///public virtual void Day { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        public virtual void Meal { get; set; }
+        ///public virtual void Meal { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        public virtual void Recipe { get; set; }
+        ///public virtual void Recipe { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        public virtual void MealPlanner();
+        ///public virtual void MealPlanner();
 
     }
 }
